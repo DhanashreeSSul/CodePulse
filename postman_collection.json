@@ -1,0 +1,92 @@
+{
+    "info": {
+        "name": "CodeInsight API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Activities",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:3000/api/activities?username=vercel",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "activities"
+                    ],
+                    "query": [
+                        {
+                            "key": "username",
+                            "value": "vercel"
+                        }
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Add Activity (Practice)",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"username\": \"test-user\",\r\n    \"type\": \"Practice\",\r\n    \"repoName\": null,\r\n    \"difficulty\": \"Medium\",\r\n    \"platform\": \"LeetCode\",\r\n    \"details\": \"Solved Two Sum\"\r\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/activities",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "activities"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Generate Insight",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\r\n    \"activities\": [\r\n        { \"type\": \"PushEvent\", \"repoName\": \"next.js\" },\r\n        { \"type\": \"Practice\", \"difficulty\": \"Hard\" }\r\n    ]\r\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:3000/api/insights",
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000",
+                    "path": [
+                        "api",
+                        "insights"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
