@@ -3,8 +3,8 @@ import Navbar from '@/components/Navbar';
 import { AuthProvider } from '@/components/AuthProvider';
 
 export const metadata = {
-  title: 'CodeInsight - Developer Analytics Dashboard',
-  description: 'Unified dashboard integrating GitHub, LeetCode, Codeforces & more. Analyze your coding skills with AI-powered insights.',
+  title: 'CodePulse - Developer Analytics Dashboard',
+  description: 'Unified dashboard integrating GitHub, LeetCode, Codeforces, GFG & more. Analyze your coding skills with AI-powered insights.',
 };
 
 export default function RootLayout({ children }) {

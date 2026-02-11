@@ -26,7 +26,7 @@ export default function LoginPage() {
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '70vh' }}>
             <div className="card" style={{ maxWidth: '440px', width: '100%' }}>
                 <h1 style={{ textAlign: 'center', marginBottom: '0.5rem', fontSize: '1.75rem', color: '#fff' }}>Welcome Back</h1>
-                <p style={{ textAlign: 'center', color: '#a0a0a0', marginBottom: '2rem' }}>Sign in to your CodeInsight account</p>
+                <p style={{ textAlign: 'center', color: '#a0a0a0', marginBottom: '2rem' }}>Sign in to your CodePulse account</p>
 
                 {error && <div className="message-error">{error}</div>}
 

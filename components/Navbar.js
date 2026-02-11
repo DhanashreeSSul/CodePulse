@@ -8,7 +8,7 @@ export default function Navbar() {
 
     return (
         <nav className="navbar">
-            <Link href="/" className="logo">CodeInsight</Link>
+            <Link href="/" className="logo">CodePulse</Link>
             <div className="nav-links">
                 {user ? (
                     <>

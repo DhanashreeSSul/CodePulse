@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div style={{ textAlign: 'center', marginTop: '4rem' }}>
       <h1 style={{ fontSize: '4rem', fontWeight: 800, marginBottom: '0.75rem', color: '#ffffff', lineHeight: 1.2, letterSpacing: '-1px' }}>
-        Code Insight
+        CodePulse
       </h1>
       <p style={{ fontSize: '1.25rem', color: '#a0a0a0', maxWidth: '550px', margin: '0 auto 0.5rem' }}>
         Your unified developer analytics platform.
