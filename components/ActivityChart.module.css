@@ -1,0 +1,131 @@
+/* CSS custom properties for theme-able heatmap colors */
+.wrapper {
+    --cell-empty: rgba(255, 255, 255, 0.05);
+    --cell-low: #3fa76f;
+    --cell-mid: #2d8f52;
+    --cell-high: #1e6f3f;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    overflow: hidden;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total {
+    font-size: 0.85rem;
+    color: #808080;
+}
+
+.heatmapWrap {
+    overflow-x: auto;
+}
+
+.heatmapWrap :global(.react-calendar-heatmap) {
+    min-width: 680px;
+}
+
+.heatmapWrap :global(.react-calendar-heatmap text) {
+    fill: #7a7a7a;
+    font-size: 10px;
+}
+
+.heatmapWrap :global(.react-calendar-heatmap .color-empty) {
+    fill: var(--cell-empty);
+}
+
+.heatmapWrap :global(.react-calendar-heatmap .color-low) {
+    fill: var(--cell-low);
+}
+
+.heatmapWrap :global(.react-calendar-heatmap .color-mid) {
+    fill: var(--cell-mid);
+}
+
+.heatmapWrap :global(.react-calendar-heatmap .color-high) {
+    fill: var(--cell-high);
+}
+
+.heatmapWrap :global(.react-calendar-heatmap rect:hover) {
+    stroke: rgba(255, 255, 255, 0.55);
+    stroke-width: 1.2;
+}
+
+/* ---- Legend ---- */
+.legend {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    justify-content: flex-end;
+}
+
+.legendLabel {
+    font-size: 0.7rem;
+    color: #505050;
+    margin: 0 2px;
+}
+
+.legendCell {
+    width: 11px;
+    height: 11px;
+    border-radius: 2px;
+}
+
+.emptyLevel {
+    background: var(--cell-empty);
+}
+
+.lowLevel {
+    background: var(--cell-low);
+}
+
+.midLevel {
+    background: var(--cell-mid);
+}
+
+.highLevel {
+    background: var(--cell-high);
+}
+
+/* ---- Tooltip ---- */
+/* ---- Empty / Loading ---- */
+.empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 2rem 1rem;
+    color: #505050;
+    text-align: center;
+    font-size: 0.875rem;
+}
+
+.emptyIcon {
+    font-size: 1.75rem;
+}
+
+.skeleton {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 0.5rem 0;
+}
+
+.skeletonRow {
+    height: 11px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0%   { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
